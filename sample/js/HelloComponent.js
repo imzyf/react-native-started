@@ -5,12 +5,13 @@ import {
     View
 } from 'react-native';
 
+// ES6 方式 - 推荐使用
 export default class HelloComponent extends Component {
     render() {
         return (
             <View>
                 <Text style={styles.welcome}>
-                    Welcome to React Native! - Hello
+                    Welcome to React Native! - {this.props.name}
                 </Text>
                 <Text style={styles.instructions}>
                     To get started, edit index.ios.js

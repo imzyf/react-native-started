@@ -6,12 +6,16 @@ import {
     Platform,
 } from 'react-native'
 import Hello from './HelloComponent'
+import HelloES5 from './HelloES5'
+import HelloFunc from './HelloFunc'
 
 export default class Setup extends Component {
     render() {
         return (
             <View style={styles.container}>
-                <Hello/>
+                <Hello name="ES6"/>
+                <HelloES5 name="ES5"/>
+                <HelloFunc name="函数式"/>
             </View>
         );
     }
