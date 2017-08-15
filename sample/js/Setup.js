@@ -8,6 +8,7 @@ import {
 import Hello from './HelloComponent'
 import HelloES5 from './HelloES5'
 import HelloFunc from './HelloFunc'
+import LifecycleComponent from './LifecycleComponent'
 
 export default class Setup extends Component {
     render() {
@@ -16,6 +17,7 @@ export default class Setup extends Component {
                 <Hello name="ES6"/>
                 <HelloES5 name="ES5"/>
                 <HelloFunc name="函数式"/>
+                <LifecycleComponent/>
             </View>
         );
     }
