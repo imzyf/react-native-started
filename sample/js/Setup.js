@@ -11,13 +11,30 @@ import HelloFunc from './HelloFunc'
 import LifecycleComponent from './LifecycleComponent'
 
 export default class Setup extends Component {
+    constructor(props){
+        super(props);
+        this.state=({
+            remove:false
+        })
+    }
+
     render() {
+        const lifecycleComponent = this.state.remove?null:<LifecycleComponent/>;
+        const lifecycleTipText = this.state.remove?'mount':'unmount';
+
         return (
             <View style={styles.container}>
                 <Hello name="ES6"/>
                 <HelloES5 name="ES5"/>
                 <HelloFunc name="函数式"/>
-                <LifecycleComponent/>
+                {lifecycleComponent}
+                <Text
+                    onPress={()=>{
+                        this.setState({
+                            remove:!this.state.remove
+                        })
+                    }}
+                >click me: {lifecycleTipText} LifecycleComponent.</Text>
             </View>
         );
     }

@@ -26,9 +26,9 @@ AppRegistry.registerComponent('sample', () => Setup);
 
 ### 创建组件
 三种创建组件的方式：
-- ES6 - 推荐。eg: [HelloComponent.js](js/HelloComponent.js)
-- ES5 eg: [HelloES5.js](js/HelloES5.js)
-- 函数式 - 无状态，不能使用 `this`，没有完整生命周期，可以使用 `props`。eg: [HelloFunc.js](js/HelloFunc.js)
+- ES6 - 推荐。eg: [HelloComponent.js](sample/js/HelloComponent.js)
+- ES5 eg: [HelloES5.js](sample/js/HelloES5.js)
+- 函数式 - 无状态，不能使用 `this`，没有完整生命周期，可以使用 `props`。eg: [HelloFunc.js](sample/js/HelloFunc.js)
 
 注意：
 - 组件类的第一个字母必须大写。
@@ -62,7 +62,7 @@ React 的 JSX 里约定分别使用首字母大、小写来区分本地组件的
 ![组件的生命周期](./resource/image/component-lifecycle.jpg)
 
 Mounting：
-- getInitialState() 在组件挂载之前调用一次。返回值将会作为 this.state 的初始值。
+- getInitialState()/constructor(props) 在组件挂载之前调用一次。返回值将会作为 this.state 的初始值。
 - componentWillMount() 服务器端和客户端都只调用一次，在初始化渲染执行之前立刻调用。
 - componentDidMount() 在初始化渲染执行之后立刻调用一次，仅客户端有效（服务器端不会调用）。
 
