@@ -77,3 +77,29 @@ Unmounting：
 
 **Tips:**
 - 在 Simulator 中 Cmd+R 选择 `Remote JS Debbugging` 将开启一个 [web 窗口](http://localhost:8081/debugger-ui) 再打开游览器的 Developer Tools 将可以看到 `console.log` 的内容。
+
+### 组件、变量、方法的导入与导出
+eg: [ExportComponent.js](sample/js/ExportComponent.js)
+
+导出：
+```javascript
+// 导出变量、常量
+export var myName = 'yifan';
+export const myWebsite = 'zyf.im';
+
+const age = 24;
+const sex = 'male';
+export {age, sex}
+
+// 导出方法
+export function sum(a, b) {
+    return a + b;
+}
+```
+
+导入：
+```javascript
+// 第一个为 default export，{} 中为其他 export 的
+import ExportComponent, {myName, age, sum} from './ExportComponent'
+```
+
