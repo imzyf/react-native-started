@@ -21,9 +21,9 @@ module.exports = HelloES5;
 
 const styles = StyleSheet.create({
     welcome: {
-        fontSize: 20,
+        fontSize: 15,
         textAlign: 'center',
-        margin: 10,
+        margin: 5,
         color: 'red',
     },
 });

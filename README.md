@@ -103,3 +103,36 @@ export function sum(a, b) {
 import ExportComponent, {myName, age, sum} from './ExportComponent'
 ```
 
+### props
+props 为从父组件传入的值，只读。 eg: [PropsTest.js](sample/js/PropsTest.js)
+
+定义默认 props：
+```javascript
+static defaultProps = {
+    name: 'default-yifan',
+    sex: 'male',
+};
+```
+
+检测 props 类型：
+```javascript
+static propTypes = {
+    name: PropTypes.string,
+    age: PropTypes.number.isRequired,
+};
+```
+Tips：WebStorm command + left click `PropTypes.string` 可以看源码中的其他选项。
+
+延展操作：
+```javascript
+var boyProps = {name: 'Liming', age: 6, sex: 'boy'};
+
+...
+
+<PropsTest {...boyProps}/>
+```
+
+结构赋值：
+```javascript
+var {name, age} = boyProps;
+```

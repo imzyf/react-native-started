@@ -9,9 +9,9 @@ import {
 export var myName = 'yifan';
 export const myWebsite = 'zyf.im';
 
-const age = 24;
-const sex = 'male';
-export {age, sex}
+const myAge = 24;
+const mySex = 'male';
+export {myAge, mySex}
 
 // 导出方法
 export function sum(a, b) {
