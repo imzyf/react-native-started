@@ -139,7 +139,7 @@ var {name, age} = boyProps;
 ```
 
 ### state
-eg: [PropsTest.js](sample/js/StateTest.js)
+eg: [StateTest.js](sample/js/StateTest.js)
 
 Tip：导入图片文件后，会有报错，需要重启 server。
 
@@ -158,3 +158,27 @@ constructor(props) {
 }
 ```
 可以通过控制 `state` 控制一些 UI 动画。
+
+### ref
+
+```javascript
+<Text style={styles.tip}
+      onPress={() => {
+          this.setState({
+              balloonSize: this.refs.refStateTest.getSize(),
+              //balloonSize: this.refs['refStateTest'].getSize(),
+          })
+      }}>
+    click me to knew the ballonSize: {this.state.balloonSize}
+</Text>
+
+<StateTest ref='refStateTest'/>
+```
+
+```javascript
+balloonSize: this.refStateTest.getSize(),
+
+<StateTest ref={refStateTest=>this.refStateTest=refStateTest}/>
+```
+
+`getSize()` 是 `<StateTest/>` 中定义的一个方法。

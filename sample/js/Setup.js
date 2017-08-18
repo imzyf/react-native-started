@@ -12,7 +12,7 @@ import LifecycleComponent from './LifecycleComponent'
 // 第一个为 default export，{} 中为其他 export 的
 import ExportComponent, {myName, myAge, sum} from './ExportComponent'
 import PropsTest from './PropsTest'
-import StateTest from './StateTest'
+import RefTest from './RefTest'
 
 export default class Setup extends Component {
     constructor(props) {
@@ -60,7 +60,7 @@ export default class Setup extends Component {
                 {/* Warning name of type number*/}
                 <PropsTest name={10} age={age}/>
 
-                <StateTest/>
+                <RefTest/>
 
             </View>
         );

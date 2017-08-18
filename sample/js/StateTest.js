@@ -21,6 +21,10 @@ export default class StateTest extends Component {
         }
     }
 
+    getSize(){
+        return this.state.balloonSize;
+    }
+
     render() {
         return (
             <View style={styles.container}>
