@@ -1,9 +1,10 @@
 # react-native-started
-react native 入门练习 - mac 环境
+React Native 入门学习练习 - Mac 环境
 
+> Thanks:
 > - [IMOOC - React Native 基础与入门](http://www.imooc.com/video/14287)
 > - [Official Getting Started](http://facebook.github.io/react-native/docs/getting-started.html)
-> - [React Native之React速学教程(上) - 贾鹏辉的技术博客](http://www.devio.org/2016/08/09/React-Native%E4%B9%8BReact%E9%80%9F%E5%AD%A6%E6%95%99%E7%A8%8B-(%E4%B8%8A)/)
+> - [React Native之React速学教程(上中下) - 贾鹏辉的技术博客](http://www.devio.org/2016/08/09/React-Native%E4%B9%8BReact%E9%80%9F%E5%AD%A6%E6%95%99%E7%A8%8B-(%E4%B8%8A)/)
 
 ## 组件
 React 组件将 UI 分割成独立的、可复用的一些碎片或部分，这些部分是相关独立的。
@@ -136,3 +137,24 @@ var boyProps = {name: 'Liming', age: 6, sex: 'boy'};
 ```javascript
 var {name, age} = boyProps;
 ```
+
+### state
+eg: [PropsTest.js](sample/js/StateTest.js)
+
+Tip：导入图片文件后，会有报错，需要重启 server。
+
+初始化
+```javascript
+// 初始化 方法一
+state = {
+    balloonSize: 10,
+};
+// 初始化 方法二（推荐）
+constructor(props) {
+    super(props);
+    this.state = {
+        balloonSize: 30,
+    }
+}
+```
+可以通过控制 `state` 控制一些 UI 动画。
