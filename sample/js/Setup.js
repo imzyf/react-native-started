@@ -13,6 +13,7 @@ import LifecycleComponent from './LifecycleComponent'
 import ExportComponent, {myName, myAge, sum} from './ExportComponent'
 import PropsTest from './PropsTest'
 import RefTest from './RefTest'
+import Animal, {Cat} from './Animal'
 
 export default class Setup extends Component {
     constructor(props) {
@@ -20,6 +21,8 @@ export default class Setup extends Component {
         this.state = ({
             remove: false,
             doubleAge: 0,
+            animal: new Animal('ketty', 'pink'),
+            cat: new Cat('jump'),
         })
     }
 
@@ -61,6 +64,9 @@ export default class Setup extends Component {
                 <PropsTest name={10} age={age}/>
 
                 <RefTest/>
+
+                <Text>{this.state.animal.getInfo()}</Text>
+                <Text>{this.state.cat.getInfo()}</Text>
 
             </View>
         );

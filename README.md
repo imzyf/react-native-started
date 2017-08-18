@@ -160,6 +160,7 @@ constructor(props) {
 可以通过控制 `state` 控制一些 UI 动画。
 
 ### ref
+eg: [RefTest.js](sample/js/RefTest.js)
 
 ```javascript
 <Text style={styles.tip}
@@ -181,4 +182,40 @@ balloonSize: this.refStateTest.getSize(),
 <StateTest ref={refStateTest=>this.refStateTest=refStateTest}/>
 ```
 
-`getSize()` 是 `<StateTest/>` 中定义的一个方法。
+`getSize()` 是 `<StateTest/>` 中定义的一个方法。S
+
+### class
+eg: [Animal.js](sample/js/Animal.js)
+
+```javascript
+export default class Animal {
+    // 构造方法，实例化的时候将会被调用，如果不指定，那么会有一个不带参数的默认构造函数。
+    constructor(name, color) {
+        this.name = name;
+        this.color = color;
+    }
+
+    getInfo(){
+        return ('name:' + this.name + ',color:' + this.color);
+    }
+}
+
+export class Cat extends Animal {
+    constructor(action) {
+        // 子类必须要在 constructor 中指定 super 方法，否则在新建实例的时候会报错。
+        // 如果没有置顶 consructor，默认带 super 方法的 constructor 将会被添加。
+        super('cat','white');
+        this.action = action;
+    }
+
+    getInfo(){
+        return ('name:' + this.name + ',color:' + this.color+ ',action:' + this.action);
+    }
+}
+```
+
+```javascript
+import Animal, {Cat} from './Animal'
+
+var animal = new Animal('dog','white');
+```
