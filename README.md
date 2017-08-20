@@ -219,3 +219,37 @@ import Animal, {Cat} from './Animal'
 
 var animal = new Animal('dog','white');
 ```
+
+## ES5 与 ES6 区别
+> [React Native之React速学教程(下)](http://www.devio.org/2016/08/11/React-Native%E4%B9%8BReact%E9%80%9F%E5%AD%A6%E6%95%99%E7%A8%8B-(%E4%B8%8B)/)
+
+## flex 布局
+> [Reac Native布局详细指南](http://www.devio.org/2016/08/01/Reac-Native%E5%B8%83%E5%B1%80%E8%AF%A6%E7%BB%86%E6%8C%87%E5%8D%97/)
+
+## 按钮详解 Touchable
+> [React Native按钮详解|Touchable系列组件使用详解](http://www.devio.org/2017/01/10/React-Native%E6%8C%89%E9%92%AE%E8%AF%A6%E8%A7%A3-Touchable%E7%B3%BB%E5%88%97%E7%BB%84%E4%BB%B6%E4%BD%BF%E7%94%A8%E8%AF%A6%E8%A7%A3/)
+
+## 图片使用
+- 网络图片，需要指定长宽。
+- `resizeMode` Determines how to resize the image when the frame doesn't match the raw image dimensions.
+- 分辨率适配 `@2x` `@3x`。
+
+## 调试技巧
+### 模拟器调试菜单
+- iOS `command + d`
+- Android `command + m`
+- 真机：`摇一摇`
+
+Reload
+- iOS `command + r`
+- Android `双击 r`
+
+Enable Live Reload
+- 全部更新代码，全部刷新。
+
+Enable Hot Reload
+- 增量更新。
+
+Remote JS Debbugging
+- Chrome 中调试代码。`command + option + i`。可以设置断点。
+- 勾选 `Pasue On Caught Exception` 有助于找错。
